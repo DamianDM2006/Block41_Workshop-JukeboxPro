@@ -13,7 +13,7 @@
     "db:reset": "npm run db:schema && npm run db:seed"
   },
   "dependencies": {
-    "bcrypt": "^5.1.1",
+    "bcrypt": "^6.0.0",
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
     "morgan": "^1.10.0",
@@ -25,5 +25,19 @@
   },
   "engines": {
     "node": ">=22"
-  }
+  },
+  "version": "1.0.0",
+  "description": "Introducing Jukebox Pro, the successor to Jukebox! Users will now need to make an account and log in before they are able to manage their playlists.",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DamianDM2006/Block41_Workshop-JukeboxPro.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DamianDM2006/Block41_Workshop-JukeboxPro/issues"
+  },
+  "homepage": "https://github.com/DamianDM2006/Block41_Workshop-JukeboxPro#readme"
 }
