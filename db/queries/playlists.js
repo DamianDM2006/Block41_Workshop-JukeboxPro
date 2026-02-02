@@ -34,3 +34,28 @@ export async function getPlaylistById(id) {
   } = await db.query(sql, [id]);
   return playlist;
 }
+
+export async function getPlaylistByUser(id) {
+  const sql = `
+  SELECT *
+  FROM playlists
+  WHERE user_id = $1
+  `;
+  const { rows: playlists } = await db.query(sql, [id]);
+  return playlists;
+}
+
+export async function getPlaylistsByTrack(id) {
+  const sql = `
+  SELECT playlists.*
+  FROM playlists
+    JOIN playlists_tracks ON playlists.id = playlists_tracks.playlist_id
+  WHERE playlists_tracks.track_id = ${id}
+  `;
+  const { rows: playlists } = await db.query(sql);
+  return playlists;
+}
+
+// await db.connect();
+// await getPlaylistsByTrack(9);
+// await db.end();
